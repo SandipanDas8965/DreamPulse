@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Dream Journal Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Your Dream Dashboard</h1>
+        <a href="/" class="dashboard-link">← Back to Journal</a>
+
+        <div id="noData" class="disclaimer hidden">
+            No entries yet. Go back and analyze a dream first.
+        </div>
+
+        <h3>Emotion Frequency</h3>
+        <canvas id="emotionChart"></canvas>
+
+        <h3>Most Common Symbols</h3>
+        <canvas id="symbolChart"></canvas>
+
+        <h3>Past Entries</h3>
+        <div id="entryList"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+</body>
+</html>

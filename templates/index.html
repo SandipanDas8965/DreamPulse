@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dream Journal Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Dream Journal Analyzer</h1>
+        <p class="disclaimer">
+            For self-reflection purposes only. This tool detects patterns in your
+            writing using NLP — it does not diagnose or interpret your psychological state.
+        </p>
+
+        <textarea id="dreamText" placeholder="Describe your dream..." rows="6"></textarea>
+        <button id="submitBtn">Analyze Dream</button>
+
+        <div id="result" class="result-box hidden">
+            <h3>Analysis</h3>
+            <p><strong>Emotion:</strong> <span id="resultEmotion"></span></p>
+            <p><strong>Confidence:</strong> <span id="resultConfidence"></span></p>
+            <p><strong>Symbols found:</strong> <span id="resultSymbols"></span></p>
+        </div>
+
+        <a href="/dashboard" class="dashboard-link">View Dashboard →</a>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
